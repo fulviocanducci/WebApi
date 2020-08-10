@@ -15,7 +15,6 @@ namespace Repository
         List<T> GetList();
         bool Any(Expression<Func<T, bool>> predicate);
         int Save();
-
         Task<T> AddAsync(T entity);
         Task<bool> EditAsync(T entity);
         Task<T> FindAsync(params object[] keys);
