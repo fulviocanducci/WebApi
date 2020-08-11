@@ -12,7 +12,7 @@ namespace WebApi.Controllers
     /// Todos Controller
     /// </summary>
     [Route("api/[controller]")]
-    [ApiController]
+    [ApiController()]
     [Authorize()]
     public class TodosController : ControllerBase
     {

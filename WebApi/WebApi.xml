@@ -65,7 +65,7 @@
             Login - Authentication
             </summary>
             <param name="login">Login class</param>
-            <returns>Json Result</returns>
+            <returns>Json Result</returns>        
         </member>
         <member name="M:WebApi.Controllers.LoginController.CheckLogin(Shared.Login)">
             <summary>

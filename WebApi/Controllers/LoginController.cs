@@ -10,7 +10,7 @@ namespace WebApi.Controllers
     /// Login Controller
     /// </summary>
     [Route("api/login")]
-    [ApiController]
+    [ApiController]    
     public class LoginController : ControllerBase
     {
         /// <summary>
@@ -38,9 +38,10 @@ namespace WebApi.Controllers
         /// Login - Authentication
         /// </summary>
         /// <param name="login">Login class</param>
-        /// <returns>Json Result</returns>
+        /// <returns>Json Result</returns>        
         [HttpPost]
-        [Route("auth")]
+        [Route("auth", Name = "Auth Name")]   
+        [ProducesResponseType(200, Type = typeof(JsonResult))]
         public async Task<IActionResult> Authenticate(Login login)
         {
             await UserCreateDefaultAsync();
