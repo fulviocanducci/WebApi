@@ -8,6 +8,7 @@ namespace Service
         public DataService(DbContextOptions<DataService> options) :
             base(options)
         {
+            Database.EnsureCreated();
         }
 
         public DbSet<Todo> Todo { get; set; }
