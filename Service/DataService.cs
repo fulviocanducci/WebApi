@@ -15,6 +15,7 @@ namespace Service
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration<Todo>(TodoConfiguration.Create());
+            modelBuilder.ApplyConfiguration<User>(UserConfiguration.Create());
         }
     }
 }

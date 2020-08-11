@@ -14,6 +14,7 @@ namespace Repository
         IEnumerable<T> Get();
         List<T> GetList();
         bool Any(Expression<Func<T, bool>> predicate);
+        int Count(Expression<Func<T, bool>> predicate = null);
         int Save();
         Task<T> AddAsync(T entity);
         Task<bool> EditAsync(T entity);
@@ -22,6 +23,7 @@ namespace Repository
         IAsyncEnumerable<T> GetAsync();
         Task<List<T>> GetListAsync();
         Task<bool> AnyAsync(Expression<Func<T, bool>> predicate);
+        Task<int> CountAsync(Expression<Func<T, bool>> predicate = null);
         Task<int> SaveAsync();
     }
 }

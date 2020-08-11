@@ -4,6 +4,7 @@ using Shared;
 
 namespace Service.Configurations
 {
+
     public class TodoConfiguration : IEntityTypeConfiguration<Todo>
     {
         public void Configure(EntityTypeBuilder<Todo> builder)

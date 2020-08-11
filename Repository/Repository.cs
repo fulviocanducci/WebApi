@@ -104,5 +104,19 @@ namespace Repository
         {
             return await Context.Set<T>().ToListAsync();
         }
+
+        public int Count(Expression<Func<T, bool>> predicate = null)
+        {
+            return predicate is null ?
+                Context.Set<T>().Count() :
+                Context.Set<T>().Count(predicate);
+        }
+
+        public async Task<int> CountAsync(Expression<Func<T, bool>> predicate = null)
+        {
+            return predicate is null ?
+                await Context.Set<T>().CountAsync() :
+                await Context.Set<T>().CountAsync(predicate);
+        }
     }
 }
