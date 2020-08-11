@@ -1,0 +1,538 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:WebApi.Controllers.HomeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WebApi.Controllers.HomeController._logger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.HomeController})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:WebApi.Controllers.HomeController.Index">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.HomeController.Privacy">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.HomeController.Error">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Controllers.LoginController">
+            <summary>
+            Login Controller
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.LoginController.Repository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.LoginController.TokenService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.LoginController.#ctor(WebApi.DataServices.RepositoryUserImplementation,WebApi.Services.ITokenService)">
+            <summary>
+            
+            </summary>
+            <param name="repository"></param>
+            <param name="tokenService"></param>
+        </member>
+        <member name="M:WebApi.Controllers.LoginController.Authenticate(Shared.Login)">
+            <summary>
+            Login - Authentication
+            </summary>
+            <param name="login">Login class</param>
+            <returns>Json Result</returns>
+        </member>
+        <member name="M:WebApi.Controllers.LoginController.CheckLogin(Shared.Login)">
+            <summary>
+            
+            </summary>
+            <param name="login"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.LoginController.UserCreateDefaultAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Controllers.TodosController">
+            <summary>
+            Todos Controller
+            </summary>
+        </member>
+        <member name="F:WebApi.Controllers.TodosController.Repository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.TodosController.#ctor(WebApi.DataServices.RepositoryTodoImplementation)">
+            <summary>
+            
+            </summary>
+            <param name="repository"></param>
+        </member>
+        <member name="M:WebApi.Controllers.TodosController.GetTodo">
+            <summary>
+            Todos - Get
+            </summary>
+            <returns>List of Todos</returns>
+        </member>
+        <member name="M:WebApi.Controllers.TodosController.GetTodo(System.Int32)">
+            <summary>
+            Todos - Get By Id
+            </summary>
+            <param name="id">param int id</param>
+            <returns>Todo class</returns>
+        </member>
+        <member name="M:WebApi.Controllers.TodosController.PutTodo(System.Int32,Shared.Todo)">
+            <summary>
+            Todos - Put
+            </summary>
+            <param name="id">param int id</param>
+            <param name="todo">param todo class</param>
+            <returns>Todo class</returns>
+        </member>
+        <member name="M:WebApi.Controllers.TodosController.PostTodo(Shared.Todo)">
+            <summary>
+            Todo - Post
+            </summary>
+            <param name="todo">Todo class</param>
+            <returns>Todo class</returns>
+        </member>
+        <member name="M:WebApi.Controllers.TodosController.DeleteTodo(System.Int32)">
+            <summary>
+            Todo - Delete
+            </summary>
+            <param name="id">param int id</param>
+            <returns>Todo class</returns>
+        </member>
+        <member name="M:WebApi.Controllers.TodosController.TodoExists(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.DataServices.RepositoryTodo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.DataServices.RepositoryTodo.#ctor(Service.DataService)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:WebApi.DataServices.RepositoryTodoImplementation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.DataServices.RepositoryTodoImplementation.#ctor(Service.DataService)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:WebApi.DataServices.RepositoryUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.DataServices.RepositoryUser.#ctor(Service.DataService)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:WebApi.DataServices.RepositoryUser.GetFirst(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="email"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.DataServices.RepositoryUserImplementation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.DataServices.RepositoryUserImplementation.#ctor(Service.DataService)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:WebApi.DataServices.RepositoryUserImplementation.GetFirst(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="email"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Migrations.FirstCommit">
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Migrations.FirstCommit.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:WebApi.Migrations.FirstCommit.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:WebApi.Migrations.FirstCommit.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:WebApi.Migrations.UserTable">
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Migrations.UserTable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:WebApi.Migrations.UserTable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:WebApi.Migrations.UserTable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:WebApi.Migrations.UserTableConfiguration">
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Migrations.UserTableConfiguration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:WebApi.Migrations.UserTableConfiguration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:WebApi.Migrations.UserTableConfiguration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:WebApi.Migrations.DataServiceModelSnapshot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Migrations.DataServiceModelSnapshot.BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:WebApi.Models.ErrorViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.ErrorViewModel.RequestId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.ErrorViewModel.ShowRequestId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebApi.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:WebApi.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Services.ITokenResult">
+            <summary>
+            ITokenResult interface
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.ITokenResult.Created">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.ITokenResult.Expires">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.ITokenResult.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.ITokenResult.Token">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebApi.Services.ITokenService">
+            <summary>
+            ITokenService interface
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.ITokenService.SigningConfigurations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.ITokenService.TokenConfigurations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Services.ITokenService.GenerateTokenJsonResult(Shared.User)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Services.ITokenService.GenerateTokenResult(Shared.User)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Services.TokenResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.TokenResult.Token">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.TokenResult.Expires">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.TokenResult.Created">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.TokenResult.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Services.TokenResult.#ctor(System.String,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="token"></param>
+            <param name="created"></param>
+            <param name="expires"></param>
+            <param name="status"></param>
+        </member>
+        <member name="T:WebApi.Services.TokenService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.TokenService.TokenConfigurations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.TokenService.SigningConfigurations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Services.TokenService.#ctor(WebApi.Settings.TokenConfigurations,WebApi.Settings.SigningConfigurations)">
+            <summary>
+            
+            </summary>
+            <param name="tokenConfigurations"></param>
+            <param name="signingConfigurations"></param>
+        </member>
+        <member name="M:WebApi.Services.TokenService.GenerateTokenResult(Shared.User)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Services.TokenService.GenerateTokenJsonResult(Shared.User)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Settings.Secret">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WebApi.Settings.Secret.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Settings.Secret.ValueToByte">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebApi.Settings.SigningConfigurations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Settings.SigningConfigurations.Key">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Settings.SigningConfigurations.SigningCredentials">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Settings.SigningConfigurations.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebApi.Settings.TokenConfigurations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Settings.TokenConfigurations.Audience">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Settings.TokenConfigurations.Issuer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Settings.TokenConfigurations.Hours">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebApi.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:WebApi.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:WebApi.Startup.GetPlatformServicesValue">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

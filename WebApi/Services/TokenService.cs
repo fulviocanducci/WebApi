@@ -8,16 +8,34 @@ using WebApi.Settings;
 
 namespace WebApi.Services
 {
-    public sealed class TokenService : ITokenService
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed class TokenService : ITokenService        
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public TokenConfigurations TokenConfigurations { get; }
+        /// <summary>
+        /// 
+        /// </summary>
         public SigningConfigurations SigningConfigurations { get; }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="tokenConfigurations"></param>
+        /// <param name="signingConfigurations"></param>
         public TokenService(TokenConfigurations tokenConfigurations, SigningConfigurations signingConfigurations)
         {
             TokenConfigurations = tokenConfigurations;
             SigningConfigurations = signingConfigurations;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public TokenResult GenerateTokenResult(User user)
         {
             DateTime created = DateTime.Now;
@@ -41,6 +59,11 @@ namespace WebApi.Services
             return new TokenResult(tokenHandler.WriteToken(token), created, expires, true);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public JsonResult GenerateTokenJsonResult(User user)
             => new JsonResult(GenerateTokenResult(user));
     }

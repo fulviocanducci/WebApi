@@ -6,9 +6,16 @@ using Service;
 
 namespace WebApi.Migrations
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [DbContext(typeof(DataService))]
     partial class DataServiceModelSnapshot : ModelSnapshot
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618

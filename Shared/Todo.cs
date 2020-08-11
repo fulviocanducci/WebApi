@@ -2,6 +2,9 @@
 
 namespace Shared
 {
+    /// <summary>
+    /// Todo class
+    /// </summary>
     public class Todo
     {
         

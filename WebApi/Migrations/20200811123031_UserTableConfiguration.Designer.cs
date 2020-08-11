@@ -7,10 +7,17 @@ using Service;
 
 namespace WebApi.Migrations
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [DbContext(typeof(DataService))]
     [Migration("20200811123031_UserTableConfiguration")]
     partial class UserTableConfiguration
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618

@@ -7,10 +7,17 @@ using Service;
 
 namespace WebApi.Migrations
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [DbContext(typeof(DataService))]
     [Migration("20200810130935_FirstCommit")]
     partial class FirstCommit
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618

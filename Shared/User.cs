@@ -1,17 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Shared
+﻿namespace Shared
 {
-    public class User
+    /// <summary>
+    /// User class
+    /// </summary>
+    public class User: Login
     {
-        public int Id { get; set; }
-
-        [Required()]
-        [EmailAddress()]
-        public string Email { get; set; }
-
-        [Required()]
-        [MinLength(4)]
-        public string Password { get; set; }
+        public int Id { get; set; }        
     }
 }

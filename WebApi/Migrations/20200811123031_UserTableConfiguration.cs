@@ -2,8 +2,16 @@
 
 namespace WebApi.Migrations
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class UserTableConfiguration : Migration
     {
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="migrationBuilder"></param>
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -21,6 +29,10 @@ namespace WebApi.Migrations
                 });
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="migrationBuilder"></param>
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
