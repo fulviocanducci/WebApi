@@ -74,9 +74,8 @@ namespace WebApi
 
             services.AddDbContext<DataService>(options =>
             {
-                options.UseSqlite("Data Source = ./db.db",
-                    option => option.MigrationsAssembly("WebApi")
-                );
+                options.UseNpgsql(@"host=ec2-184-73-249-9.compute-1.amazonaws.com;database=d3oblk8s8iao7i;user id=cgswowxkwssyal;password=545bf54785dccaefb09b97dbbe79d641bae8d1a7b49702be892ab27ffc6f849a;port=5432",
+                    option => option.MigrationsAssembly("WebApi"));
             });
             services.AddScoped<RepositoryTodoImplementation, RepositoryTodo>();
             services.AddScoped<RepositoryUserImplementation, RepositoryUser>();
