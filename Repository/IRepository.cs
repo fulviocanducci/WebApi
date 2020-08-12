@@ -21,6 +21,7 @@ namespace Repository
         Task<T> FindAsync(params object[] keys);
         Task<bool> DeleteAsync(T entity);
         IAsyncEnumerable<T> GetAsync();
+        IAsyncEnumerable<T> GetAsync<TKey>(Expression<Func< T, TKey>> orderBy);
         Task<List<T>> GetListAsync();
         Task<bool> AnyAsync(Expression<Func<T, bool>> predicate);
         Task<int> CountAsync(Expression<Func<T, bool>> predicate = null);

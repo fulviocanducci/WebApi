@@ -36,7 +36,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public IAsyncEnumerable<Todo> GetTodo()
         {
-            return Repository.GetAsync();
+            return Repository.GetAsync(o => o.Id);
         }
 
         /// <summary>

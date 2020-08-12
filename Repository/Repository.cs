@@ -86,6 +86,11 @@ namespace Repository
             return Context.Set<T>().AsAsyncEnumerable<T>();
         }
 
+        public IAsyncEnumerable<T> GetAsync<TKey>(Expression<Func<T, TKey>> orderBy)
+        {
+            return Context.Set<T>().OrderBy(orderBy).AsAsyncEnumerable();
+        }
+
         public async Task<bool> AnyAsync(Expression<Func<T, bool>> predicate)
         {
             return await Context.Set<T>().AnyAsync(predicate);
